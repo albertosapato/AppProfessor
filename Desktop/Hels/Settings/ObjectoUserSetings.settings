@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Desktop.Hels.Settings" GeneratedClassName="ObjectoUserSetings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultAppSkin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Skin/Office 2019 Colorful</Value>
+    </Setting>
+    <Setting Name="DefaultPalette" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Yale</Value>
+    </Setting>
+    <Setting Name="TouchUI" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DefaultAppFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Microsoft Sans Serif, 8.25pt</Value>
+    </Setting>
+    <Setting Name="Conection" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SQLSERVER</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

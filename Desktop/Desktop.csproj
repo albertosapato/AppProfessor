@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.EntityFrameworkCore.Design.2.2.3\build\net461\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('..\packages\Microsoft.EntityFrameworkCore.Design.2.2.3\build\net461\Microsoft.EntityFrameworkCore.Design.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA08435B-FB94-4686-9F8A-D94AEE92BDEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Desktop</RootNamespace>
+    <AssemblyName>Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_Training_1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.2" />
+    <Reference Include="DevExpress.Data.v18.2" />
+    <Reference Include="DevExpress.Printing.v18.2.Core" />
+    <Reference Include="DevExpress.Utils.v18.2" />
+    <Reference Include="DevExpress.XtraBars.v18.2" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v18.2" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraWizard.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=2.2.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Design, Version=2.2.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Design.2.2.3\lib\net461\Microsoft.EntityFrameworkCore.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=2.2.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.2.2.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.2.0\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hels\EmailValidade.cs" />
+    <Compile Include="Hels\ImagemTratamento.cs" />
+    <Compile Include="View\Forms\frmProfessorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmProfessorAdd.designer.cs">
+      <DependentUpon>frmProfessorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmDisciplinaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmDisciplinaAdd.designer.cs">
+      <DependentUpon>frmDisciplinaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmTrimestreAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmTrimestreAdd.designer.cs">
+      <DependentUpon>frmTrimestreAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmGruposAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmGruposAdd.designer.cs">
+      <DependentUpon>frmGruposAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmProgramdor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmProgramdor.Designer.cs">
+      <DependentUpon>frmProgramdor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\AppsAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\AppsAbout.Designer.cs">
+      <DependentUpon>AppsAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmCursosAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmCursosAdd.designer.cs">
+      <DependentUpon>frmCursosAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmPeriodoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmPeriodoAdd.designer.cs">
+      <DependentUpon>frmPeriodoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmClasseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmClasseAdd.designer.cs">
+      <DependentUpon>frmClasseAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmEscolaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmEscolaAdd.designer.cs">
+      <DependentUpon>frmEscolaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmProfessorDisciplinaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmProfessorDisciplinaAdd.designer.cs">
+      <DependentUpon>frmProfessorDisciplinaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmTurmasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmTurmasAdd.designer.cs">
+      <DependentUpon>frmTurmasAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmUsuariosAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmUsuariosAdd.designer.cs">
+      <DependentUpon>frmUsuariosAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Helps\frmDefinicoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Helps\frmDefinicoes.Designer.cs">
+      <DependentUpon>frmDefinicoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmProfessores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmProfessores.Designer.cs">
+      <DependentUpon>frmProfessores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmDisciplina.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmDisciplina.Designer.cs">
+      <DependentUpon>frmDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmCursos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmMacs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmMacs.Designer.cs">
+      <DependentUpon>frmMacs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmEscolas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmEscolas.Designer.cs">
+      <DependentUpon>frmEscolas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmTrimestres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmTrimestres.Designer.cs">
+      <DependentUpon>frmTrimestres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmProfessorDisciplina.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmProfessorDisciplina.Designer.cs">
+      <DependentUpon>frmProfessorDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmUsuariosGrupos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmUsuariosGrupos.Designer.cs">
+      <DependentUpon>frmUsuariosGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmPeriodos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmPeriodos.Designer.cs">
+      <DependentUpon>frmPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmClasse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmClasse.Designer.cs">
+      <DependentUpon>frmClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmTurmas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmTurmas.Designer.cs">
+      <DependentUpon>frmTurmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmAlunos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmAlunos.Designer.cs">
+      <DependentUpon>frmAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmInicialWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmInicialWizardForm.Designer.cs">
+      <DependentUpon>frmInicialWizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmAlunosAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmAlunosAdd.designer.cs">
+      <DependentUpon>frmAlunosAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmRecovery.designer.cs">
+      <DependentUpon>frmRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmRecoveryForce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmRecoveryForce.designer.cs">
+      <DependentUpon>frmRecoveryForce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmSplah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmSplah.Designer.cs">
+      <DependentUpon>frmSplah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hels\ArredondarFormas.cs" />
+    <Compile Include="Hels\Progress_Bar.cs" />
+    <Compile Include="Hels\SaveLayoutXML.cs" />
+    <Compile Include="Hels\Settings\AppsAboutSetings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>AppsAboutSetings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Hels\Settings\FormsColor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>FormsColor.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Hels\Settings\ObjectoLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ObjectoLogin.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Hels\Settings\ObjectoUserSetings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ObjectoUserSetings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmUsuarios.designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\frmUsuariosPermissoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\frmUsuariosPermissoes.designer.cs">
+      <DependentUpon>frmUsuariosPermissoes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Forms\frmProfessorAdd.resx">
+      <DependentUpon>frmProfessorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmDisciplinaAdd.resx">
+      <DependentUpon>frmDisciplinaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmTrimestreAdd.resx">
+      <DependentUpon>frmTrimestreAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmGruposAdd.resx">
+      <DependentUpon>frmGruposAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmProgramdor.resx">
+      <DependentUpon>frmProgramdor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\AppsAbout.resx">
+      <DependentUpon>AppsAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmCursosAdd.resx">
+      <DependentUpon>frmCursosAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmPeriodoAdd.resx">
+      <DependentUpon>frmPeriodoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmClasseAdd.resx">
+      <DependentUpon>frmClasseAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEscolaAdd.resx">
+      <DependentUpon>frmEscolaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmProfessorDisciplinaAdd.resx">
+      <DependentUpon>frmProfessorDisciplinaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmTurmasAdd.resx">
+      <DependentUpon>frmTurmasAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmUsuariosAdd.resx">
+      <DependentUpon>frmUsuariosAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Helps\frmDefinicoes.resx">
+      <DependentUpon>frmDefinicoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmProfessores.resx">
+      <DependentUpon>frmProfessores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmDisciplina.resx">
+      <DependentUpon>frmDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmMacs.resx">
+      <DependentUpon>frmMacs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmEscolas.resx">
+      <DependentUpon>frmEscolas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmTrimestres.resx">
+      <DependentUpon>frmTrimestres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmProfessorDisciplina.resx">
+      <DependentUpon>frmProfessorDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmUsuariosGrupos.resx">
+      <DependentUpon>frmUsuariosGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmPeriodos.resx">
+      <DependentUpon>frmPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmClasse.resx">
+      <DependentUpon>frmClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmTurmas.resx">
+      <DependentUpon>frmTurmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmAlunos.resx">
+      <DependentUpon>frmAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmInicialWizardForm.resx">
+      <DependentUpon>frmInicialWizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmAlunosAdd.resx">
+      <DependentUpon>frmAlunosAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmRecovery.resx">
+      <DependentUpon>frmRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmRecoveryForce.resx">
+      <DependentUpon>frmRecoveryForce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmSplah.resx">
+      <DependentUpon>frmSplah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\frmUsuariosPermissoes.resx">
+      <DependentUpon>frmUsuariosPermissoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Hels\Settings\AppsAboutSetings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>AppsAboutSetings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hels\Settings\FormsColor.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>FormsColor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hels\Settings\ObjectoLogin.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ObjectoLogin.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hels\Settings\ObjectoUserSetings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ObjectoUserSetings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.Models.Alunos.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.ClassesViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.CursosViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.DisciplinaViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.EscolaViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.GruposViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.PeriodoViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.PermissoesViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.ProfessorViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.Professor_DisciplinaViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.TrimestresViewModels.datasource" />
+    <None Include="Properties\DataSources\DataEntityFrameWork.ViewModels.TurmasViewModels.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataEntityFrameWork\DataEntityFrameWork.csproj">
+      <Project>{2d7b2820-e854-454c-9758-50426ccc354f}</Project>
+      <Name>DataEntityFrameWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_Training_1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.EntityFrameworkCore.Design.2.2.3\build\net461\Microsoft.EntityFrameworkCore.Design.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.EntityFrameworkCore.Design.2.2.3\build\net461\Microsoft.EntityFrameworkCore.Design.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
